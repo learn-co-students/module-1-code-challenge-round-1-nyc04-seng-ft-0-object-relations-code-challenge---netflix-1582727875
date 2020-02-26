@@ -11,6 +11,15 @@ end
 # so they will be available to test and play around with in your console
 
 
+# Seeeeeeeeds
+
+top_gun = Movie.new('Top Gun')
+skyfall = Movie.new('Skyfall')
+avengers = Movie.new('Avengers')
+jay_bob = Movie.new('Jay and Silent Bob Strike Back')
+
+
+
 
 
 
