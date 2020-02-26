@@ -10,10 +10,20 @@ end
 # This is a convenient place to define variables and/or set up new object instances,
 # so they will be available to test and play around with in your console
 
+jaws = Movie.new("Jaws")
+nightcrawler = Movie.new("Nightcrawler")
+john = Viewer.new("John")
+stan = Viewer.new("Stan")
+p stan.rate_movie(jaws,8)
+p  stan.rate_movie(jaws,100)
+p jaws.title
+p john.username
 
 
 
 
+
+puts " Done"
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
-binding.pry
+#binding.pry
 0
