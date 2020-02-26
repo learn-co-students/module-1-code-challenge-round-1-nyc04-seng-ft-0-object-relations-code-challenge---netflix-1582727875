@@ -10,10 +10,19 @@ end
 # This is a convenient place to define variables and/or set up new object instances,
 # so they will be available to test and play around with in your console
 
+tropic = Movie.new("Tropic Thunder")
+guns = Movie.new("John Wick")
+eric = Viewer.new("Eric")
+john = Viewer.new("John")
+scathing = Review.new(eric, tropic, 5)
+tops = Review.new(john, guns, 8)
+good = Review.new(eric, guns, 7)
 
-
+p eric.reviewed_movies
+p guns.reviewers
+# p scathing.movie
 
 
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
-binding.pry
+
 0
