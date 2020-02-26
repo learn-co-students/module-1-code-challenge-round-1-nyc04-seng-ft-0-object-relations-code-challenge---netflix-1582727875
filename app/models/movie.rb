@@ -12,4 +12,14 @@ class Movie
     @@all
   end
 
+  # returns the `Movie`'s title
+  def title
+    @title
+  end
+
+  # returns an array of all the `Movie` instances that have been initialized
+  def self.all
+    @@all
+  end
+
 end
