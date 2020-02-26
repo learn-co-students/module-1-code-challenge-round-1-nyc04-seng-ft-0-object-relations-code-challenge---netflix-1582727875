@@ -20,10 +20,19 @@ class Movie
 	end
 
 	def average_rating
-		self.reviews.sum{|r| r.rating} / self.reviews.length
+		if self.reviews.length > 0
+			self.reviews.sum{|r| r.rating} / self.reviews.length
+		else
+			# application logic should not call Movie#average_rating 
+			# if no reviews exist, but if it does, 
+			# returning a zero prevents a "division by zero" error 
+			# in this and the following method
+			0.0
+		end
 	end
 
 	def self.highest_rated
+		# intialize any un-rated movies with a score of 0
 		self.all.max_by{|m| m.average_rating}
 	end
 

@@ -28,12 +28,14 @@ class Viewer
 			# already reviewed, update the rating
 			my_review = Review.all.find{|r| r.viewer == self && r.movie == movie}
 			my_review.rating = rating.to_f		# TODO: move the to_f into an instance variable "setter" method
+			
+			my_review		# returns the instance
 		else 
 			# not yet reviewed, add review
 			Review.new(self, movie, rating)
 		end
 	end
 
-	
+
 
 end
